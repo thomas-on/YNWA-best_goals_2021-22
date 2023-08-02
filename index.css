@@ -1,0 +1,150 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: grid;
+    grid-template-columns: minmax(100px, 200px) repeat(2, minmax(100px, 200px));
+    grid-template-areas:
+        "image title title"
+        "image subtitle subtitle";
+    margin: 1em;
+}
+
+.club-crest {
+    grid-area: image;
+    max-width: 100%;
+    margin: 0.5 0 0 0;
+}
+
+header h1 {
+    grid-area: title;
+    font-size: 1.4rem;   
+    margin: 0.5em 0 0 0;
+}
+
+header h2 {
+    grid-area: subtitle;
+    font-size: 1.2rem;
+    margin: 0;
+    font-style: italic;
+}
+
+.emphasis {
+    color: #c1121f;
+}
+
+.strike-out {
+    text-decoration: line-through;
+    text-decoration-color: #c1121f;
+    text-decoration-thickness: 4px;
+}
+
+.container-main {
+    background-color: #e9ecef;
+    margin: 2em 1em 0.5em 1em;
+    border-radius: 3%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) minmax(80px, 100px);
+    grid-template-areas:
+        "image image image image"
+        "competition competition competition date"
+        "match match match icons";
+    position: relative;
+}
+
+.main-picture {
+    grid-area: image;
+    max-width: 100%;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+}
+
+.main-info-goalscorer { 
+    grid-area: scorer;
+    font-size: 1em;
+    margin: 0 0.3em 0.2em 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #c1121f;
+    color: whitesmoke;  
+    border-radius: 10%;
+    padding: 0.15em;
+    margin: 0;
+    
+}
+
+.main-info-description { 
+    /* grid-area: title;
+    margin: 0.5em 0.3em;
+    font-size: 1em; */
+}
+    
+.main-info-date { 
+    grid-area: date;
+    font-size: 1em;
+    justify-self: end;
+    margin: 0.5em;
+}
+
+.main-info-competition { 
+    grid-area: competition;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0.5em;
+}
+
+.main-info-match { 
+    grid-area: match;
+    font-size: 1em;
+    margin: 0 0.5em;
+}
+
+.icons-info {
+    grid-area: icons;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.fa-heart,
+.fa-comment,
+.icons-bar p  { 
+    margin: 0.3em;
+    font-size: 1em;
+}
+
+.liked {
+    color: #d00027;
+}
+
+.comments-view {
+    color: #00B2A9;
+}
+
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.3em 1em;
+    background-color: #343a40;
+    color: whitesmoke;
+    border-radius: 5%;
+}
+
+.comment-text {
+    padding-left: 1em;
+    margin: 0.5em 0 0 0;
+}
+
+.comment-name {
+    padding-right: 1em;
+    font-weight: bold;
+    align-self: end;
+    margin: 0 0 0.5em 0;
+}
+
+.hidden {
+    display: none;
+}
