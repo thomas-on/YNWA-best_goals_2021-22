@@ -148,3 +148,70 @@ header h2 {
 .hidden {
     display: none;
 }
+
+
+@media (min-width: 675px) {
+    header {
+        grid-template-columns: minmax(100px, 200px) repeat(2, minmax(100px, 800px));
+    }
+
+    .club-crest {
+    }
+
+    header h1 {
+        font-size: 4rem;   
+    }
+
+    header h2 {
+        font-size: 2rem;
+    }
+
+    .emphasis {
+    }
+
+    .strike-out {
+        text-decoration-thickness: 10px;
+    }
+    
+    .container-main {
+        grid-template-columns: minmax(80px, 400px) minmax(80px, 400px);
+        grid-template-areas:
+            "image competition"
+            "image match "
+            "image date"
+            "image icons";
+        grid-gap: 1em;
+    }
+
+    .main-picture {
+        border-radius: 3%;
+    }
+
+    .main-info-goalscorer { 
+    }
+
+    .main-info-description { 
+    }
+        
+    .main-info-date { 
+        font-size: 1.2em;
+        justify-self: start;
+        margin: 0;
+    }
+
+    .main-info-competition { 
+        font-size: 1.5em;
+        margin: 2em 0 0 0;
+    }
+
+    .main-info-match { 
+        font-size: 1.3em;
+        margin: 0;
+    }
+
+    .fa-heart,
+    .fa-comment,
+    .icons-bar p  { 
+        font-size: 1.2em;
+    }
+}
